@@ -1,0 +1,2 @@
+--without-pixbuf --with-xpm --without-gtk --with-pam
+

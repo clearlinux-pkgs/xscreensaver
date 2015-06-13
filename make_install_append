@@ -1,0 +1,2 @@
+# Makefile.in is just too ancient to reconf, checks for /etc/pam.d existence
+install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscreensaver
