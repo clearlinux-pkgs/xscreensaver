@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.32
-Release  : 3
+Release  : 4
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.32.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.32.tar.gz
 Summary  : A minimal installation of xscreensaver.
