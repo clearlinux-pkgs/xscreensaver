@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.32
-Release  : 4
+Release  : 5
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.32.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.32.tar.gz
 Summary  : A minimal installation of xscreensaver.
@@ -91,6 +91,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 
 %files bin
 %defattr(-,root,root,-)
+%exclude /usr/libexec/xscreensaver/ljlatest
 /usr/bin/xscreensaver
 /usr/bin/xscreensaver-command
 /usr/bin/xscreensaver-getimage
@@ -156,7 +157,6 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 /usr/libexec/xscreensaver/kaleidescope
 /usr/libexec/xscreensaver/kumppa
 /usr/libexec/xscreensaver/lcdscrub
-/usr/libexec/xscreensaver/ljlatest
 /usr/libexec/xscreensaver/loop
 /usr/libexec/xscreensaver/m6502
 /usr/libexec/xscreensaver/maze
