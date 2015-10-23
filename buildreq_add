@@ -7,3 +7,4 @@ libjpeg-turbo-dev
 Linux-PAM-dev
 libXmu-dev
 libXinerama-dev
+libXext-dev
