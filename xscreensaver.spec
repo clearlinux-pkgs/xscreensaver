@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.32
-Release  : 6
+Release  : 7
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.32.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.32.tar.gz
 Summary  : A minimal installation of xscreensaver.
@@ -33,6 +33,7 @@ BuildRequires : pkgconfig(xext)
 BuildRequires : pkgconfig(xi)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xrandr)
+Patch1: 0001-Do-not-warn-about-invalid-PAM-directories.patch
 
 %description
 A modular screen saver and locker for the X Window System.
@@ -73,6 +74,7 @@ locales components for the xscreensaver package.
 
 %prep
 %setup -q -n xscreensaver-5.32
+%patch1 -p1
 
 %build
 %configure --disable-static --without-pixbuf --with-xpm --without-gtk --with-pam
