@@ -1,0 +1,28 @@
+From c81d524ac7d09215cc3024eaefe20f8a9679a8ac Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <michael.i.doherty@intel.com>
+Date: Fri, 29 Jan 2016 14:33:43 +0000
+Subject: [PATCH] Do not warn about invalid PAM directories
+
+Signed-off-by: Ikey Doherty <michael.i.doherty@intel.com>
+---
+ driver/passwd-pam.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/driver/passwd-pam.c b/driver/passwd-pam.c
+index 0c60d50..cbcff43 100644
+--- a/driver/passwd-pam.c
++++ b/driver/passwd-pam.c
+@@ -350,8 +350,8 @@ pam_priv_init (int argc, char **argv, Bool verbose_p)
+      This is a priv-init instead of a non-priv init in case the directory
+      is unreadable or something (don't know if that actually happens.)
+    */
+-  const char   dir[] = "/etc/pam.d";
+-  const char  file[] = "/etc/pam.d/" PAM_SERVICE_NAME;
++  const char   dir[] = "/usr/share/pam.d";
++  const char  file[] = "/usr/share/pam.d/" PAM_SERVICE_NAME;
+   const char file2[] = "/etc/pam.conf";
+   struct stat st;
+ 
+-- 
+2.7.0
+
