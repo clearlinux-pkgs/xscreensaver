@@ -1,0 +1,13 @@
+libX11.so.6
+libXext.so.6
+libXi.so.6
+libXinerama.so.1
+libXmu.so.6
+libXrandr.so.2
+libXt.so.6
+libXxf86vm.so.1
+libc.so.6
+libcrypt.so.1
+libjpeg.so.62
+libm.so.6
+libpam.so.0
