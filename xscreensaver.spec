@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.36
-Release  : 12
+Release  : 13
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.36.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.36.tar.gz
 Summary  : A minimal installation of xscreensaver.
@@ -78,6 +78,10 @@ locales components for the xscreensaver package.
 
 %build
 export LANG=C
+export CFLAGS="$CFLAGS -Os -ffunction-sections "
+export FCFLAGS="$CFLAGS -Os -ffunction-sections "
+export FFLAGS="$CFLAGS -Os -ffunction-sections "
+export CXXFLAGS="$CXXFLAGS -Os -ffunction-sections "
 %configure --disable-static --without-pixbuf --with-xpm --without-gtk --with-pam --with-dpms-ext
 make V=1  %{?_smp_mflags}
 
