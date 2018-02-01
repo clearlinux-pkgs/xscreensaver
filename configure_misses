@@ -1,0 +1,32 @@
+Configure miss: whether gcc accepts -no-cpp-precomp
+Configure miss: sqrtf
+Configure miss: whether this is MacOS X
+Configure miss: XineramaQueryScreens in -lXext
+Configure miss: XRRGetScreenInfo in -lXext
+Configure miss: XF86MiscSetGrabKeysState in -lXxf86misc
+Configure miss: XHPDisableReset in X11/XHPlib.h
+Configure miss: whether /proc/interrupts contains keyboard data
+Configure miss: pam_fail_delay in -lpam
+Configure miss: Kerberos 4
+Configure miss: Sun-style shadow passwords
+Configure miss: DEC-style shadow passwords
+Configure miss: HP-style shadow passwords
+Configure miss: FreeBSD-style shadow passwords
+Configure miss: crypt in -lc
+Configure miss: gdmflexiserver
+Configure miss: kdmctl
+Configure miss: lxdm
+Configure miss: dm-tool
+Configure miss: glXCreateContext in -lMesaGL
+Configure miss: glXCreateContext in -lGL
+Configure miss: X11/extensions/readdisplay.h
+Configure miss: image directory /usr/share/backgrounds/images/
+Configure miss: image directory /usr/share/wallpapers/
+Configure miss: image directory /Library/Desktop Pictures/
+Configure miss: text file /usr/X11R6/lib/X11/doc/README
+Configure miss: text file /usr/share/doc/xserver-common/copyright
+Configure miss: text file /usr/share/doc/xserver-xorg-core/copyright
+Configure miss: text file /usr/X11R6/README
+Configure miss: text file /usr/share/doc/libX11*/COPYING
+Configure miss: text file /usr/X11/share/X11/doc/README*
+Configure miss: text file /usr/share/doc/debian/debian-manifesto
