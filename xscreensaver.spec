@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.38
-Release  : 15
+Release  : 16
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.38.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.38.tar.gz
 Summary  : A minimal installation of xscreensaver.
