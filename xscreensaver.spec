@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.39
-Release  : 17
+Release  : 18
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.39.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.39.tar.gz
 Summary  : A minimal installation of xscreensaver.
