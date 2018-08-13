@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.40
-Release  : 19
+Release  : 20
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.40.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.40.tar.gz
 Summary  : A minimal installation of xscreensaver.
@@ -92,7 +92,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534120081
+export SOURCE_DATE_EPOCH=1534120226
 export CFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
@@ -101,7 +101,7 @@ export CXXFLAGS="$CXXFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1534120081
+export SOURCE_DATE_EPOCH=1534120226
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/xscreensaver
 cp OSX/Sparkle.framework/Versions/A/Resources/License.txt %{buildroot}/usr/share/doc/xscreensaver/OSX_Sparkle.framework_Versions_A_Resources_License.txt
@@ -152,6 +152,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/libexec/xscreensaver/euler2d
 %exclude /usr/libexec/xscreensaver/fadeplot
 %exclude /usr/libexec/xscreensaver/fiberlamp
+%exclude /usr/libexec/xscreensaver/filmleader
 %exclude /usr/libexec/xscreensaver/fireworkx
 %exclude /usr/libexec/xscreensaver/flame
 %exclude /usr/libexec/xscreensaver/flow
@@ -159,6 +160,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/libexec/xscreensaver/fontglide
 %exclude /usr/libexec/xscreensaver/fuzzyflakes
 %exclude /usr/libexec/xscreensaver/galaxy
+%exclude /usr/libexec/xscreensaver/glitchpeg
 %exclude /usr/libexec/xscreensaver/goop
 %exclude /usr/libexec/xscreensaver/grav
 %exclude /usr/libexec/xscreensaver/greynetic
@@ -222,6 +224,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/libexec/xscreensaver/truchet
 %exclude /usr/libexec/xscreensaver/twang
 %exclude /usr/libexec/xscreensaver/vermiculate
+%exclude /usr/libexec/xscreensaver/vfeedback
 %exclude /usr/libexec/xscreensaver/vidwhacker
 %exclude /usr/libexec/xscreensaver/wander
 %exclude /usr/libexec/xscreensaver/webcollage
@@ -241,9 +244,6 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 /usr/bin/xscreensaver-getimage-file
 /usr/bin/xscreensaver-getimage-video
 /usr/bin/xscreensaver-text
-/usr/libexec/xscreensaver/filmleader
-/usr/libexec/xscreensaver/glitchpeg
-/usr/libexec/xscreensaver/vfeedback
 
 %files data
 %defattr(-,root,root,-)
@@ -282,6 +282,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/share/xscreensaver/config/euler2d.xml
 %exclude /usr/share/xscreensaver/config/fadeplot.xml
 %exclude /usr/share/xscreensaver/config/fiberlamp.xml
+%exclude /usr/share/xscreensaver/config/filmleader.xml
 %exclude /usr/share/xscreensaver/config/fireworkx.xml
 %exclude /usr/share/xscreensaver/config/flame.xml
 %exclude /usr/share/xscreensaver/config/flow.xml
@@ -289,6 +290,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/share/xscreensaver/config/fontglide.xml
 %exclude /usr/share/xscreensaver/config/fuzzyflakes.xml
 %exclude /usr/share/xscreensaver/config/galaxy.xml
+%exclude /usr/share/xscreensaver/config/glitchpeg.xml
 %exclude /usr/share/xscreensaver/config/goop.xml
 %exclude /usr/share/xscreensaver/config/grav.xml
 %exclude /usr/share/xscreensaver/config/greynetic.xml
@@ -351,6 +353,7 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/share/xscreensaver/config/truchet.xml
 %exclude /usr/share/xscreensaver/config/twang.xml
 %exclude /usr/share/xscreensaver/config/vermiculate.xml
+%exclude /usr/share/xscreensaver/config/vfeedback.xml
 %exclude /usr/share/xscreensaver/config/vidwhacker.xml
 %exclude /usr/share/xscreensaver/config/wander.xml
 %exclude /usr/share/xscreensaver/config/webcollage.xml
@@ -366,9 +369,6 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/share/xscreensaver/config/zoom.xml
 /usr/share/pam.d/xscreensaver
 /usr/share/xscreensaver/config/README
-/usr/share/xscreensaver/config/filmleader.xml
-/usr/share/xscreensaver/config/glitchpeg.xml
-/usr/share/xscreensaver/config/vfeedback.xml
 
 %files doc
 %defattr(0644,root,root,0755)

@@ -115,6 +115,9 @@
 /usr/libexec/xscreensaver/xmatrix
 /usr/libexec/xscreensaver/xrayswarm
 /usr/libexec/xscreensaver/xspirograph
+/usr/libexec/xscreensaver/filmleader
+/usr/libexec/xscreensaver/glitchpeg
+/usr/libexec/xscreensaver/vfeedback
 /usr/libexec/xscreensaver/zoom
 /usr/share/xscreensaver/config/abstractile.xml
 /usr/share/xscreensaver/config/anemone.xml
@@ -233,3 +236,6 @@
 /usr/share/xscreensaver/config/xrayswarm.xml
 /usr/share/xscreensaver/config/xspirograph.xml
 /usr/share/xscreensaver/config/zoom.xml
+/usr/share/xscreensaver/config/filmleader.xml
+/usr/share/xscreensaver/config/glitchpeg.xml
+/usr/share/xscreensaver/config/vfeedback.xml
