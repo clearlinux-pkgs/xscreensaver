@@ -1,5 +1,6 @@
 libX11.so.6
 libXext.so.6
+libXft.so.2
 libXi.so.6
 libXinerama.so.1
 libXmu.so.6
@@ -11,3 +12,5 @@ libcrypt.so.1
 libjpeg.so.62
 libm.so.6
 libpam.so.0
+libpng16.so.16
+libpthread.so.0
