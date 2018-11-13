@@ -4,16 +4,18 @@
 #
 Name     : xscreensaver
 Version  : 5.40
-Release  : 20
+Release  : 21
 URL      : http://www.jwz.org/xscreensaver/xscreensaver-5.40.tar.gz
 Source0  : http://www.jwz.org/xscreensaver/xscreensaver-5.40.tar.gz
 Summary  : A minimal installation of xscreensaver.
 Group    : Development/Tools
 License  : BSD-2-Clause
-Requires: xscreensaver-bin
-Requires: xscreensaver-locales
-Requires: xscreensaver-man
-Requires: xscreensaver-data
+Requires: xscreensaver-bin = %{version}-%{release}
+Requires: xscreensaver-data = %{version}-%{release}
+Requires: xscreensaver-libexec = %{version}-%{release}
+Requires: xscreensaver-license = %{version}-%{release}
+Requires: xscreensaver-locales = %{version}-%{release}
+Requires: xscreensaver-man = %{version}-%{release}
 BuildRequires : Linux-PAM-dev
 BuildRequires : bc
 BuildRequires : gdk-pixbuf-dev
@@ -27,8 +29,11 @@ BuildRequires : libXmu-dev
 BuildRequires : libjpeg-turbo-dev
 BuildRequires : perl
 BuildRequires : perl(XML::Parser)
+BuildRequires : pkgconfig(gdk-pixbuf-2.0)
 BuildRequires : pkgconfig(gl)
 BuildRequires : pkgconfig(ice)
+BuildRequires : pkgconfig(libglade-2.0)
+BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(x11)
 BuildRequires : pkgconfig(xext)
 BuildRequires : pkgconfig(xi)
@@ -43,8 +48,10 @@ More than 200 display modes are included in this package.
 %package bin
 Summary: bin components for the xscreensaver package.
 Group: Binaries
-Requires: xscreensaver-data
-Requires: xscreensaver-man
+Requires: xscreensaver-data = %{version}-%{release}
+Requires: xscreensaver-libexec = %{version}-%{release}
+Requires: xscreensaver-license = %{version}-%{release}
+Requires: xscreensaver-man = %{version}-%{release}
 
 %description bin
 bin components for the xscreensaver package.
@@ -58,13 +65,21 @@ Group: Data
 data components for the xscreensaver package.
 
 
-%package doc
-Summary: doc components for the xscreensaver package.
-Group: Documentation
-Requires: xscreensaver-man
+%package libexec
+Summary: libexec components for the xscreensaver package.
+Group: Default
+Requires: xscreensaver-license = %{version}-%{release}
 
-%description doc
-doc components for the xscreensaver package.
+%description libexec
+libexec components for the xscreensaver package.
+
+
+%package license
+Summary: license components for the xscreensaver package.
+Group: Default
+
+%description license
+license components for the xscreensaver package.
 
 
 %package locales
@@ -92,19 +107,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534120226
+export SOURCE_DATE_EPOCH=1542128378
 export CFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -Os -fdata-sections -ffunction-sections -fno-semantic-interposition "
-%configure --disable-static --without-pixbuf --with-xpm --without-gtk --with-pam --with-dpms-ext
+%configure --disable-static --with-xpm --with-pam --with-dpms-ext
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1534120226
+export SOURCE_DATE_EPOCH=1542128378
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/xscreensaver
-cp OSX/Sparkle.framework/Versions/A/Resources/License.txt %{buildroot}/usr/share/doc/xscreensaver/OSX_Sparkle.framework_Versions_A_Resources_License.txt
+mkdir -p %{buildroot}/usr/share/package-licenses/xscreensaver
+cp OSX/Sparkle.framework/Versions/A/Resources/License.txt %{buildroot}/usr/share/package-licenses/xscreensaver/OSX_Sparkle.framework_Versions_A_Resources_License.txt
 %make_install
 %find_lang xscreensaver
 ## install_append content
@@ -117,129 +132,9 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 
 %files bin
 %defattr(-,root,root,-)
-%exclude /usr/libexec/xscreensaver/abstractile
-%exclude /usr/libexec/xscreensaver/anemone
-%exclude /usr/libexec/xscreensaver/anemotaxis
-%exclude /usr/libexec/xscreensaver/apollonian
-%exclude /usr/libexec/xscreensaver/apple2
-%exclude /usr/libexec/xscreensaver/attraction
-%exclude /usr/libexec/xscreensaver/barcode
-%exclude /usr/libexec/xscreensaver/binaryring
-%exclude /usr/libexec/xscreensaver/blaster
-%exclude /usr/libexec/xscreensaver/blitspin
-%exclude /usr/libexec/xscreensaver/bouboule
-%exclude /usr/libexec/xscreensaver/boxfit
-%exclude /usr/libexec/xscreensaver/braid
-%exclude /usr/libexec/xscreensaver/bsod
-%exclude /usr/libexec/xscreensaver/bumps
-%exclude /usr/libexec/xscreensaver/ccurve
-%exclude /usr/libexec/xscreensaver/celtic
-%exclude /usr/libexec/xscreensaver/cloudlife
-%exclude /usr/libexec/xscreensaver/compass
-%exclude /usr/libexec/xscreensaver/coral
-%exclude /usr/libexec/xscreensaver/crystal
-%exclude /usr/libexec/xscreensaver/cwaves
-%exclude /usr/libexec/xscreensaver/cynosure
-%exclude /usr/libexec/xscreensaver/decayscreen
-%exclude /usr/libexec/xscreensaver/deco
-%exclude /usr/libexec/xscreensaver/deluxe
-%exclude /usr/libexec/xscreensaver/demon
-%exclude /usr/libexec/xscreensaver/discrete
-%exclude /usr/libexec/xscreensaver/distort
-%exclude /usr/libexec/xscreensaver/drift
-%exclude /usr/libexec/xscreensaver/epicycle
-%exclude /usr/libexec/xscreensaver/eruption
-%exclude /usr/libexec/xscreensaver/euler2d
-%exclude /usr/libexec/xscreensaver/fadeplot
-%exclude /usr/libexec/xscreensaver/fiberlamp
-%exclude /usr/libexec/xscreensaver/filmleader
-%exclude /usr/libexec/xscreensaver/fireworkx
-%exclude /usr/libexec/xscreensaver/flame
-%exclude /usr/libexec/xscreensaver/flow
-%exclude /usr/libexec/xscreensaver/fluidballs
-%exclude /usr/libexec/xscreensaver/fontglide
-%exclude /usr/libexec/xscreensaver/fuzzyflakes
-%exclude /usr/libexec/xscreensaver/galaxy
-%exclude /usr/libexec/xscreensaver/glitchpeg
-%exclude /usr/libexec/xscreensaver/goop
-%exclude /usr/libexec/xscreensaver/grav
-%exclude /usr/libexec/xscreensaver/greynetic
-%exclude /usr/libexec/xscreensaver/halftone
-%exclude /usr/libexec/xscreensaver/halo
-%exclude /usr/libexec/xscreensaver/helix
-%exclude /usr/libexec/xscreensaver/hexadrop
-%exclude /usr/libexec/xscreensaver/hopalong
-%exclude /usr/libexec/xscreensaver/ifs
-%exclude /usr/libexec/xscreensaver/imsmap
-%exclude /usr/libexec/xscreensaver/interaggregate
-%exclude /usr/libexec/xscreensaver/interference
-%exclude /usr/libexec/xscreensaver/intermomentary
-%exclude /usr/libexec/xscreensaver/julia
-%exclude /usr/libexec/xscreensaver/kaleidescope
-%exclude /usr/libexec/xscreensaver/kumppa
-%exclude /usr/libexec/xscreensaver/lcdscrub
-%exclude /usr/libexec/xscreensaver/ljlatest
-%exclude /usr/libexec/xscreensaver/loop
-%exclude /usr/libexec/xscreensaver/m6502
-%exclude /usr/libexec/xscreensaver/maze
-%exclude /usr/libexec/xscreensaver/memscroller
-%exclude /usr/libexec/xscreensaver/metaballs
-%exclude /usr/libexec/xscreensaver/moire
-%exclude /usr/libexec/xscreensaver/moire2
-%exclude /usr/libexec/xscreensaver/mountain
-%exclude /usr/libexec/xscreensaver/munch
-%exclude /usr/libexec/xscreensaver/nerverot
-%exclude /usr/libexec/xscreensaver/noseguy
-%exclude /usr/libexec/xscreensaver/pacman
-%exclude /usr/libexec/xscreensaver/pedal
-%exclude /usr/libexec/xscreensaver/penetrate
-%exclude /usr/libexec/xscreensaver/penrose
-%exclude /usr/libexec/xscreensaver/petri
-%exclude /usr/libexec/xscreensaver/phosphor
-%exclude /usr/libexec/xscreensaver/piecewise
-%exclude /usr/libexec/xscreensaver/polyominoes
-%exclude /usr/libexec/xscreensaver/pong
-%exclude /usr/libexec/xscreensaver/popsquares
-%exclude /usr/libexec/xscreensaver/pyro
-%exclude /usr/libexec/xscreensaver/qix
-%exclude /usr/libexec/xscreensaver/rd-bomb
-%exclude /usr/libexec/xscreensaver/ripples
-%exclude /usr/libexec/xscreensaver/rocks
-%exclude /usr/libexec/xscreensaver/rorschach
-%exclude /usr/libexec/xscreensaver/rotzoomer
-%exclude /usr/libexec/xscreensaver/shadebobs
-%exclude /usr/libexec/xscreensaver/sierpinski
-%exclude /usr/libexec/xscreensaver/slidescreen
-%exclude /usr/libexec/xscreensaver/slip
-%exclude /usr/libexec/xscreensaver/speedmine
-%exclude /usr/libexec/xscreensaver/spotlight
-%exclude /usr/libexec/xscreensaver/squiral
-%exclude /usr/libexec/xscreensaver/starfish
-%exclude /usr/libexec/xscreensaver/strange
-%exclude /usr/libexec/xscreensaver/substrate
-%exclude /usr/libexec/xscreensaver/swirl
-%exclude /usr/libexec/xscreensaver/tessellimage
-%exclude /usr/libexec/xscreensaver/thornbird
-%exclude /usr/libexec/xscreensaver/triangle
-%exclude /usr/libexec/xscreensaver/truchet
-%exclude /usr/libexec/xscreensaver/twang
-%exclude /usr/libexec/xscreensaver/vermiculate
-%exclude /usr/libexec/xscreensaver/vfeedback
-%exclude /usr/libexec/xscreensaver/vidwhacker
-%exclude /usr/libexec/xscreensaver/wander
-%exclude /usr/libexec/xscreensaver/webcollage
-%exclude /usr/libexec/xscreensaver/whirlwindwarp
-%exclude /usr/libexec/xscreensaver/wormhole
-%exclude /usr/libexec/xscreensaver/xanalogtv
-%exclude /usr/libexec/xscreensaver/xflame
-%exclude /usr/libexec/xscreensaver/xjack
-%exclude /usr/libexec/xscreensaver/xlyap
-%exclude /usr/libexec/xscreensaver/xmatrix
-%exclude /usr/libexec/xscreensaver/xrayswarm
-%exclude /usr/libexec/xscreensaver/xspirograph
-%exclude /usr/libexec/xscreensaver/zoom
 /usr/bin/xscreensaver
 /usr/bin/xscreensaver-command
+/usr/bin/xscreensaver-demo
 /usr/bin/xscreensaver-getimage
 /usr/bin/xscreensaver-getimage-file
 /usr/bin/xscreensaver-getimage-video
@@ -367,15 +262,149 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 %exclude /usr/share/xscreensaver/config/xrayswarm.xml
 %exclude /usr/share/xscreensaver/config/xspirograph.xml
 %exclude /usr/share/xscreensaver/config/zoom.xml
+/usr/share/applications/xscreensaver-properties.desktop
 /usr/share/pam.d/xscreensaver
+/usr/share/pixmaps/xscreensaver.xpm
 /usr/share/xscreensaver/config/README
+/usr/share/xscreensaver/glade/screensaver-cmndln.png
+/usr/share/xscreensaver/glade/screensaver-colorselector.png
+/usr/share/xscreensaver/glade/screensaver-diagnostic.png
+/usr/share/xscreensaver/glade/screensaver-locking.png
+/usr/share/xscreensaver/glade/screensaver-power.png
+/usr/share/xscreensaver/glade/screensaver-snap.png
+/usr/share/xscreensaver/glade/xscreensaver-demo.glade2
 
-%files doc
+%files libexec
+%defattr(-,root,root,-)
+%exclude /usr/libexec/xscreensaver/abstractile
+%exclude /usr/libexec/xscreensaver/anemone
+%exclude /usr/libexec/xscreensaver/anemotaxis
+%exclude /usr/libexec/xscreensaver/apollonian
+%exclude /usr/libexec/xscreensaver/apple2
+%exclude /usr/libexec/xscreensaver/attraction
+%exclude /usr/libexec/xscreensaver/barcode
+%exclude /usr/libexec/xscreensaver/binaryring
+%exclude /usr/libexec/xscreensaver/blaster
+%exclude /usr/libexec/xscreensaver/blitspin
+%exclude /usr/libexec/xscreensaver/bouboule
+%exclude /usr/libexec/xscreensaver/boxfit
+%exclude /usr/libexec/xscreensaver/braid
+%exclude /usr/libexec/xscreensaver/bsod
+%exclude /usr/libexec/xscreensaver/bumps
+%exclude /usr/libexec/xscreensaver/ccurve
+%exclude /usr/libexec/xscreensaver/celtic
+%exclude /usr/libexec/xscreensaver/cloudlife
+%exclude /usr/libexec/xscreensaver/compass
+%exclude /usr/libexec/xscreensaver/coral
+%exclude /usr/libexec/xscreensaver/crystal
+%exclude /usr/libexec/xscreensaver/cwaves
+%exclude /usr/libexec/xscreensaver/cynosure
+%exclude /usr/libexec/xscreensaver/decayscreen
+%exclude /usr/libexec/xscreensaver/deco
+%exclude /usr/libexec/xscreensaver/deluxe
+%exclude /usr/libexec/xscreensaver/demon
+%exclude /usr/libexec/xscreensaver/discrete
+%exclude /usr/libexec/xscreensaver/distort
+%exclude /usr/libexec/xscreensaver/drift
+%exclude /usr/libexec/xscreensaver/epicycle
+%exclude /usr/libexec/xscreensaver/eruption
+%exclude /usr/libexec/xscreensaver/euler2d
+%exclude /usr/libexec/xscreensaver/fadeplot
+%exclude /usr/libexec/xscreensaver/fiberlamp
+%exclude /usr/libexec/xscreensaver/filmleader
+%exclude /usr/libexec/xscreensaver/fireworkx
+%exclude /usr/libexec/xscreensaver/flame
+%exclude /usr/libexec/xscreensaver/flow
+%exclude /usr/libexec/xscreensaver/fluidballs
+%exclude /usr/libexec/xscreensaver/fontglide
+%exclude /usr/libexec/xscreensaver/fuzzyflakes
+%exclude /usr/libexec/xscreensaver/galaxy
+%exclude /usr/libexec/xscreensaver/glitchpeg
+%exclude /usr/libexec/xscreensaver/goop
+%exclude /usr/libexec/xscreensaver/grav
+%exclude /usr/libexec/xscreensaver/greynetic
+%exclude /usr/libexec/xscreensaver/halftone
+%exclude /usr/libexec/xscreensaver/halo
+%exclude /usr/libexec/xscreensaver/helix
+%exclude /usr/libexec/xscreensaver/hexadrop
+%exclude /usr/libexec/xscreensaver/hopalong
+%exclude /usr/libexec/xscreensaver/ifs
+%exclude /usr/libexec/xscreensaver/imsmap
+%exclude /usr/libexec/xscreensaver/interaggregate
+%exclude /usr/libexec/xscreensaver/interference
+%exclude /usr/libexec/xscreensaver/intermomentary
+%exclude /usr/libexec/xscreensaver/julia
+%exclude /usr/libexec/xscreensaver/kaleidescope
+%exclude /usr/libexec/xscreensaver/kumppa
+%exclude /usr/libexec/xscreensaver/lcdscrub
+%exclude /usr/libexec/xscreensaver/ljlatest
+%exclude /usr/libexec/xscreensaver/loop
+%exclude /usr/libexec/xscreensaver/m6502
+%exclude /usr/libexec/xscreensaver/maze
+%exclude /usr/libexec/xscreensaver/memscroller
+%exclude /usr/libexec/xscreensaver/metaballs
+%exclude /usr/libexec/xscreensaver/moire
+%exclude /usr/libexec/xscreensaver/moire2
+%exclude /usr/libexec/xscreensaver/mountain
+%exclude /usr/libexec/xscreensaver/munch
+%exclude /usr/libexec/xscreensaver/nerverot
+%exclude /usr/libexec/xscreensaver/noseguy
+%exclude /usr/libexec/xscreensaver/pacman
+%exclude /usr/libexec/xscreensaver/pedal
+%exclude /usr/libexec/xscreensaver/penetrate
+%exclude /usr/libexec/xscreensaver/penrose
+%exclude /usr/libexec/xscreensaver/petri
+%exclude /usr/libexec/xscreensaver/phosphor
+%exclude /usr/libexec/xscreensaver/piecewise
+%exclude /usr/libexec/xscreensaver/polyominoes
+%exclude /usr/libexec/xscreensaver/pong
+%exclude /usr/libexec/xscreensaver/popsquares
+%exclude /usr/libexec/xscreensaver/pyro
+%exclude /usr/libexec/xscreensaver/qix
+%exclude /usr/libexec/xscreensaver/rd-bomb
+%exclude /usr/libexec/xscreensaver/ripples
+%exclude /usr/libexec/xscreensaver/rocks
+%exclude /usr/libexec/xscreensaver/rorschach
+%exclude /usr/libexec/xscreensaver/rotzoomer
+%exclude /usr/libexec/xscreensaver/shadebobs
+%exclude /usr/libexec/xscreensaver/sierpinski
+%exclude /usr/libexec/xscreensaver/slidescreen
+%exclude /usr/libexec/xscreensaver/slip
+%exclude /usr/libexec/xscreensaver/speedmine
+%exclude /usr/libexec/xscreensaver/spotlight
+%exclude /usr/libexec/xscreensaver/squiral
+%exclude /usr/libexec/xscreensaver/starfish
+%exclude /usr/libexec/xscreensaver/strange
+%exclude /usr/libexec/xscreensaver/substrate
+%exclude /usr/libexec/xscreensaver/swirl
+%exclude /usr/libexec/xscreensaver/tessellimage
+%exclude /usr/libexec/xscreensaver/thornbird
+%exclude /usr/libexec/xscreensaver/triangle
+%exclude /usr/libexec/xscreensaver/truchet
+%exclude /usr/libexec/xscreensaver/twang
+%exclude /usr/libexec/xscreensaver/vermiculate
+%exclude /usr/libexec/xscreensaver/vfeedback
+%exclude /usr/libexec/xscreensaver/vidwhacker
+%exclude /usr/libexec/xscreensaver/wander
+%exclude /usr/libexec/xscreensaver/webcollage
+%exclude /usr/libexec/xscreensaver/whirlwindwarp
+%exclude /usr/libexec/xscreensaver/wormhole
+%exclude /usr/libexec/xscreensaver/xanalogtv
+%exclude /usr/libexec/xscreensaver/xflame
+%exclude /usr/libexec/xscreensaver/xjack
+%exclude /usr/libexec/xscreensaver/xlyap
+%exclude /usr/libexec/xscreensaver/xmatrix
+%exclude /usr/libexec/xscreensaver/xrayswarm
+%exclude /usr/libexec/xscreensaver/xspirograph
+%exclude /usr/libexec/xscreensaver/zoom
+/usr/libexec/xscreensaver/webcollage-helper
+
+%files license
 %defattr(0644,root,root,0755)
-%doc /usr/share/doc/xscreensaver/*
+/usr/share/package-licenses/xscreensaver/OSX_Sparkle.framework_Versions_A_Resources_License.txt
 
 %files man
-%defattr(-,root,root,-)
+%defattr(0644,root,root,0755)
 /usr/share/man/man1/xscreensaver-command.1
 /usr/share/man/man1/xscreensaver-demo.1
 /usr/share/man/man1/xscreensaver-getimage-file.1

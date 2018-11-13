@@ -1,2 +1,1 @@
---without-pixbuf --with-xpm --without-gtk --with-pam --with-dpms-ext
-
+--with-xpm --with-pam --with-dpms-ext

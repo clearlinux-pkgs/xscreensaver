@@ -1,9 +1,12 @@
 # This file contains additional pkgconfig build requirements that did
 # not get picked up automatically. One name per line, no whitespace.
-xi
-ice
-xrandr
+gdk-pixbuf-2.0
 gl
-xext
+ice
+libglade-2.0
+libxml-2.0
 x11
+xext
+xi
 xpm
+xrandr
