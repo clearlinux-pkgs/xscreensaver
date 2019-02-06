@@ -1,11 +1,6 @@
 libX11.so.6
-libXext.so.6
-libXi.so.6
-libXinerama.so.1
 libXmu.so.6
-libXrandr.so.2
 libXt.so.6
-libXxf86vm.so.1
 libatk-1.0.so.0
 libc.so.6
 libcrypt.so.1

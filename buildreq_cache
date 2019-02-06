@@ -1,3 +1,6 @@
-5.40
+5.42
 glibc-staticdev
+intltool-dev
+krb5-dev
+lightdm
 perl
