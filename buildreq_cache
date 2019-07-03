@@ -1,6 +1,8 @@
-5.42
+5.43
 glibc-staticdev
 intltool-dev
 krb5-dev
+libcap-dev
 lightdm
 perl
+pkgconfig(systemd)
