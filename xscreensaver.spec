@@ -4,10 +4,10 @@
 #
 Name     : xscreensaver
 Version  : 5.43
-Release  : 23
+Release  : 25
 URL      : https://www.jwz.org/xscreensaver/xscreensaver-5.43.tar.gz
 Source0  : https://www.jwz.org/xscreensaver/xscreensaver-5.43.tar.gz
-Summary  : Screen saver and locker for the X Window System
+Summary  : A minimal installation of xscreensaver.
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: xscreensaver-bin = %{version}-%{release}
@@ -75,6 +75,14 @@ Group: Data
 data components for the xscreensaver package.
 
 
+%package extras
+Summary: extras components for the xscreensaver package.
+Group: Default
+
+%description extras
+extras components for the xscreensaver package.
+
+
 %package libexec
 Summary: libexec components for the xscreensaver package.
 Group: Default
@@ -109,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562145410
+export SOURCE_DATE_EPOCH=1565845318
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -122,7 +130,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1562145410
+export SOURCE_DATE_EPOCH=1565845318
 rm -rf %{buildroot}
 %make_install
 %find_lang xscreensaver
@@ -146,126 +154,6 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 
 %files data
 %defattr(-,root,root,-)
-%exclude /usr/share/xscreensaver/config/abstractile.xml
-%exclude /usr/share/xscreensaver/config/anemone.xml
-%exclude /usr/share/xscreensaver/config/anemotaxis.xml
-%exclude /usr/share/xscreensaver/config/apollonian.xml
-%exclude /usr/share/xscreensaver/config/apple2.xml
-%exclude /usr/share/xscreensaver/config/attraction.xml
-%exclude /usr/share/xscreensaver/config/barcode.xml
-%exclude /usr/share/xscreensaver/config/binaryring.xml
-%exclude /usr/share/xscreensaver/config/blaster.xml
-%exclude /usr/share/xscreensaver/config/blitspin.xml
-%exclude /usr/share/xscreensaver/config/bouboule.xml
-%exclude /usr/share/xscreensaver/config/boxfit.xml
-%exclude /usr/share/xscreensaver/config/braid.xml
-%exclude /usr/share/xscreensaver/config/bsod.xml
-%exclude /usr/share/xscreensaver/config/bumps.xml
-%exclude /usr/share/xscreensaver/config/ccurve.xml
-%exclude /usr/share/xscreensaver/config/celtic.xml
-%exclude /usr/share/xscreensaver/config/cloudlife.xml
-%exclude /usr/share/xscreensaver/config/compass.xml
-%exclude /usr/share/xscreensaver/config/coral.xml
-%exclude /usr/share/xscreensaver/config/crystal.xml
-%exclude /usr/share/xscreensaver/config/cwaves.xml
-%exclude /usr/share/xscreensaver/config/cynosure.xml
-%exclude /usr/share/xscreensaver/config/decayscreen.xml
-%exclude /usr/share/xscreensaver/config/deco.xml
-%exclude /usr/share/xscreensaver/config/deluxe.xml
-%exclude /usr/share/xscreensaver/config/demon.xml
-%exclude /usr/share/xscreensaver/config/discrete.xml
-%exclude /usr/share/xscreensaver/config/distort.xml
-%exclude /usr/share/xscreensaver/config/drift.xml
-%exclude /usr/share/xscreensaver/config/epicycle.xml
-%exclude /usr/share/xscreensaver/config/eruption.xml
-%exclude /usr/share/xscreensaver/config/euler2d.xml
-%exclude /usr/share/xscreensaver/config/fadeplot.xml
-%exclude /usr/share/xscreensaver/config/fiberlamp.xml
-%exclude /usr/share/xscreensaver/config/filmleader.xml
-%exclude /usr/share/xscreensaver/config/fireworkx.xml
-%exclude /usr/share/xscreensaver/config/flame.xml
-%exclude /usr/share/xscreensaver/config/flow.xml
-%exclude /usr/share/xscreensaver/config/fluidballs.xml
-%exclude /usr/share/xscreensaver/config/fontglide.xml
-%exclude /usr/share/xscreensaver/config/fuzzyflakes.xml
-%exclude /usr/share/xscreensaver/config/galaxy.xml
-%exclude /usr/share/xscreensaver/config/glitchpeg.xml
-%exclude /usr/share/xscreensaver/config/goop.xml
-%exclude /usr/share/xscreensaver/config/grav.xml
-%exclude /usr/share/xscreensaver/config/greynetic.xml
-%exclude /usr/share/xscreensaver/config/halftone.xml
-%exclude /usr/share/xscreensaver/config/halo.xml
-%exclude /usr/share/xscreensaver/config/helix.xml
-%exclude /usr/share/xscreensaver/config/hexadrop.xml
-%exclude /usr/share/xscreensaver/config/hopalong.xml
-%exclude /usr/share/xscreensaver/config/ifs.xml
-%exclude /usr/share/xscreensaver/config/imsmap.xml
-%exclude /usr/share/xscreensaver/config/interaggregate.xml
-%exclude /usr/share/xscreensaver/config/interference.xml
-%exclude /usr/share/xscreensaver/config/intermomentary.xml
-%exclude /usr/share/xscreensaver/config/julia.xml
-%exclude /usr/share/xscreensaver/config/kaleidescope.xml
-%exclude /usr/share/xscreensaver/config/kumppa.xml
-%exclude /usr/share/xscreensaver/config/lcdscrub.xml
-%exclude /usr/share/xscreensaver/config/loop.xml
-%exclude /usr/share/xscreensaver/config/m6502.xml
-%exclude /usr/share/xscreensaver/config/maze.xml
-%exclude /usr/share/xscreensaver/config/memscroller.xml
-%exclude /usr/share/xscreensaver/config/metaballs.xml
-%exclude /usr/share/xscreensaver/config/moire.xml
-%exclude /usr/share/xscreensaver/config/moire2.xml
-%exclude /usr/share/xscreensaver/config/mountain.xml
-%exclude /usr/share/xscreensaver/config/munch.xml
-%exclude /usr/share/xscreensaver/config/nerverot.xml
-%exclude /usr/share/xscreensaver/config/noseguy.xml
-%exclude /usr/share/xscreensaver/config/pacman.xml
-%exclude /usr/share/xscreensaver/config/pedal.xml
-%exclude /usr/share/xscreensaver/config/penetrate.xml
-%exclude /usr/share/xscreensaver/config/penrose.xml
-%exclude /usr/share/xscreensaver/config/petri.xml
-%exclude /usr/share/xscreensaver/config/phosphor.xml
-%exclude /usr/share/xscreensaver/config/piecewise.xml
-%exclude /usr/share/xscreensaver/config/polyominoes.xml
-%exclude /usr/share/xscreensaver/config/pong.xml
-%exclude /usr/share/xscreensaver/config/popsquares.xml
-%exclude /usr/share/xscreensaver/config/pyro.xml
-%exclude /usr/share/xscreensaver/config/qix.xml
-%exclude /usr/share/xscreensaver/config/rd-bomb.xml
-%exclude /usr/share/xscreensaver/config/ripples.xml
-%exclude /usr/share/xscreensaver/config/rocks.xml
-%exclude /usr/share/xscreensaver/config/rorschach.xml
-%exclude /usr/share/xscreensaver/config/rotzoomer.xml
-%exclude /usr/share/xscreensaver/config/shadebobs.xml
-%exclude /usr/share/xscreensaver/config/sierpinski.xml
-%exclude /usr/share/xscreensaver/config/slidescreen.xml
-%exclude /usr/share/xscreensaver/config/slip.xml
-%exclude /usr/share/xscreensaver/config/speedmine.xml
-%exclude /usr/share/xscreensaver/config/spotlight.xml
-%exclude /usr/share/xscreensaver/config/squiral.xml
-%exclude /usr/share/xscreensaver/config/starfish.xml
-%exclude /usr/share/xscreensaver/config/strange.xml
-%exclude /usr/share/xscreensaver/config/substrate.xml
-%exclude /usr/share/xscreensaver/config/swirl.xml
-%exclude /usr/share/xscreensaver/config/tessellimage.xml
-%exclude /usr/share/xscreensaver/config/thornbird.xml
-%exclude /usr/share/xscreensaver/config/triangle.xml
-%exclude /usr/share/xscreensaver/config/truchet.xml
-%exclude /usr/share/xscreensaver/config/twang.xml
-%exclude /usr/share/xscreensaver/config/vermiculate.xml
-%exclude /usr/share/xscreensaver/config/vfeedback.xml
-%exclude /usr/share/xscreensaver/config/vidwhacker.xml
-%exclude /usr/share/xscreensaver/config/wander.xml
-%exclude /usr/share/xscreensaver/config/webcollage.xml
-%exclude /usr/share/xscreensaver/config/whirlwindwarp.xml
-%exclude /usr/share/xscreensaver/config/wormhole.xml
-%exclude /usr/share/xscreensaver/config/xanalogtv.xml
-%exclude /usr/share/xscreensaver/config/xflame.xml
-%exclude /usr/share/xscreensaver/config/xjack.xml
-%exclude /usr/share/xscreensaver/config/xlyap.xml
-%exclude /usr/share/xscreensaver/config/xmatrix.xml
-%exclude /usr/share/xscreensaver/config/xrayswarm.xml
-%exclude /usr/share/xscreensaver/config/xspirograph.xml
-%exclude /usr/share/xscreensaver/config/zoom.xml
 /usr/share/applications/xscreensaver-properties.desktop
 /usr/share/pam.d/xscreensaver
 /usr/share/pixmaps/xscreensaver.xpm
@@ -278,129 +166,252 @@ install -m 00644 -D driver/xscreensaver.pam $RPM_BUILD_ROOT/usr/share/pam.d/xscr
 /usr/share/xscreensaver/glade/screensaver-snap.png
 /usr/share/xscreensaver/glade/xscreensaver-demo.glade2
 
+%files extras
+%defattr(-,root,root,-)
+/usr/libexec/xscreensaver/abstractile
+/usr/libexec/xscreensaver/anemone
+/usr/libexec/xscreensaver/anemotaxis
+/usr/libexec/xscreensaver/apollonian
+/usr/libexec/xscreensaver/apple2
+/usr/libexec/xscreensaver/attraction
+/usr/libexec/xscreensaver/barcode
+/usr/libexec/xscreensaver/binaryring
+/usr/libexec/xscreensaver/blaster
+/usr/libexec/xscreensaver/blitspin
+/usr/libexec/xscreensaver/bouboule
+/usr/libexec/xscreensaver/boxfit
+/usr/libexec/xscreensaver/braid
+/usr/libexec/xscreensaver/bsod
+/usr/libexec/xscreensaver/bumps
+/usr/libexec/xscreensaver/ccurve
+/usr/libexec/xscreensaver/celtic
+/usr/libexec/xscreensaver/cloudlife
+/usr/libexec/xscreensaver/compass
+/usr/libexec/xscreensaver/coral
+/usr/libexec/xscreensaver/crystal
+/usr/libexec/xscreensaver/cwaves
+/usr/libexec/xscreensaver/cynosure
+/usr/libexec/xscreensaver/decayscreen
+/usr/libexec/xscreensaver/deco
+/usr/libexec/xscreensaver/deluxe
+/usr/libexec/xscreensaver/demon
+/usr/libexec/xscreensaver/discrete
+/usr/libexec/xscreensaver/distort
+/usr/libexec/xscreensaver/drift
+/usr/libexec/xscreensaver/epicycle
+/usr/libexec/xscreensaver/eruption
+/usr/libexec/xscreensaver/euler2d
+/usr/libexec/xscreensaver/fadeplot
+/usr/libexec/xscreensaver/fiberlamp
+/usr/libexec/xscreensaver/filmleader
+/usr/libexec/xscreensaver/fireworkx
+/usr/libexec/xscreensaver/flame
+/usr/libexec/xscreensaver/flow
+/usr/libexec/xscreensaver/fluidballs
+/usr/libexec/xscreensaver/fontglide
+/usr/libexec/xscreensaver/fuzzyflakes
+/usr/libexec/xscreensaver/galaxy
+/usr/libexec/xscreensaver/glitchpeg
+/usr/libexec/xscreensaver/goop
+/usr/libexec/xscreensaver/grav
+/usr/libexec/xscreensaver/greynetic
+/usr/libexec/xscreensaver/halftone
+/usr/libexec/xscreensaver/halo
+/usr/libexec/xscreensaver/helix
+/usr/libexec/xscreensaver/hexadrop
+/usr/libexec/xscreensaver/hopalong
+/usr/libexec/xscreensaver/ifs
+/usr/libexec/xscreensaver/imsmap
+/usr/libexec/xscreensaver/interaggregate
+/usr/libexec/xscreensaver/interference
+/usr/libexec/xscreensaver/intermomentary
+/usr/libexec/xscreensaver/julia
+/usr/libexec/xscreensaver/kaleidescope
+/usr/libexec/xscreensaver/kumppa
+/usr/libexec/xscreensaver/lcdscrub
+/usr/libexec/xscreensaver/ljlatest
+/usr/libexec/xscreensaver/loop
+/usr/libexec/xscreensaver/m6502
+/usr/libexec/xscreensaver/maze
+/usr/libexec/xscreensaver/memscroller
+/usr/libexec/xscreensaver/metaballs
+/usr/libexec/xscreensaver/moire
+/usr/libexec/xscreensaver/moire2
+/usr/libexec/xscreensaver/mountain
+/usr/libexec/xscreensaver/munch
+/usr/libexec/xscreensaver/nerverot
+/usr/libexec/xscreensaver/noseguy
+/usr/libexec/xscreensaver/pacman
+/usr/libexec/xscreensaver/pedal
+/usr/libexec/xscreensaver/penetrate
+/usr/libexec/xscreensaver/penrose
+/usr/libexec/xscreensaver/petri
+/usr/libexec/xscreensaver/phosphor
+/usr/libexec/xscreensaver/piecewise
+/usr/libexec/xscreensaver/polyominoes
+/usr/libexec/xscreensaver/pong
+/usr/libexec/xscreensaver/popsquares
+/usr/libexec/xscreensaver/pyro
+/usr/libexec/xscreensaver/qix
+/usr/libexec/xscreensaver/rd-bomb
+/usr/libexec/xscreensaver/ripples
+/usr/libexec/xscreensaver/rocks
+/usr/libexec/xscreensaver/rorschach
+/usr/libexec/xscreensaver/rotzoomer
+/usr/libexec/xscreensaver/shadebobs
+/usr/libexec/xscreensaver/sierpinski
+/usr/libexec/xscreensaver/slidescreen
+/usr/libexec/xscreensaver/slip
+/usr/libexec/xscreensaver/speedmine
+/usr/libexec/xscreensaver/spotlight
+/usr/libexec/xscreensaver/squiral
+/usr/libexec/xscreensaver/starfish
+/usr/libexec/xscreensaver/strange
+/usr/libexec/xscreensaver/substrate
+/usr/libexec/xscreensaver/swirl
+/usr/libexec/xscreensaver/tessellimage
+/usr/libexec/xscreensaver/thornbird
+/usr/libexec/xscreensaver/triangle
+/usr/libexec/xscreensaver/truchet
+/usr/libexec/xscreensaver/twang
+/usr/libexec/xscreensaver/vermiculate
+/usr/libexec/xscreensaver/vfeedback
+/usr/libexec/xscreensaver/vidwhacker
+/usr/libexec/xscreensaver/wander
+/usr/libexec/xscreensaver/webcollage
+/usr/libexec/xscreensaver/whirlwindwarp
+/usr/libexec/xscreensaver/wormhole
+/usr/libexec/xscreensaver/xanalogtv
+/usr/libexec/xscreensaver/xflame
+/usr/libexec/xscreensaver/xjack
+/usr/libexec/xscreensaver/xlyap
+/usr/libexec/xscreensaver/xmatrix
+/usr/libexec/xscreensaver/xrayswarm
+/usr/libexec/xscreensaver/xspirograph
+/usr/libexec/xscreensaver/zoom
+/usr/share/xscreensaver/config/abstractile.xml
+/usr/share/xscreensaver/config/anemone.xml
+/usr/share/xscreensaver/config/anemotaxis.xml
+/usr/share/xscreensaver/config/apollonian.xml
+/usr/share/xscreensaver/config/apple2.xml
+/usr/share/xscreensaver/config/attraction.xml
+/usr/share/xscreensaver/config/barcode.xml
+/usr/share/xscreensaver/config/binaryring.xml
+/usr/share/xscreensaver/config/blaster.xml
+/usr/share/xscreensaver/config/blitspin.xml
+/usr/share/xscreensaver/config/bouboule.xml
+/usr/share/xscreensaver/config/boxfit.xml
+/usr/share/xscreensaver/config/braid.xml
+/usr/share/xscreensaver/config/bsod.xml
+/usr/share/xscreensaver/config/bumps.xml
+/usr/share/xscreensaver/config/ccurve.xml
+/usr/share/xscreensaver/config/celtic.xml
+/usr/share/xscreensaver/config/cloudlife.xml
+/usr/share/xscreensaver/config/compass.xml
+/usr/share/xscreensaver/config/coral.xml
+/usr/share/xscreensaver/config/crystal.xml
+/usr/share/xscreensaver/config/cwaves.xml
+/usr/share/xscreensaver/config/cynosure.xml
+/usr/share/xscreensaver/config/decayscreen.xml
+/usr/share/xscreensaver/config/deco.xml
+/usr/share/xscreensaver/config/deluxe.xml
+/usr/share/xscreensaver/config/demon.xml
+/usr/share/xscreensaver/config/discrete.xml
+/usr/share/xscreensaver/config/distort.xml
+/usr/share/xscreensaver/config/drift.xml
+/usr/share/xscreensaver/config/epicycle.xml
+/usr/share/xscreensaver/config/eruption.xml
+/usr/share/xscreensaver/config/euler2d.xml
+/usr/share/xscreensaver/config/fadeplot.xml
+/usr/share/xscreensaver/config/fiberlamp.xml
+/usr/share/xscreensaver/config/filmleader.xml
+/usr/share/xscreensaver/config/fireworkx.xml
+/usr/share/xscreensaver/config/flame.xml
+/usr/share/xscreensaver/config/flow.xml
+/usr/share/xscreensaver/config/fluidballs.xml
+/usr/share/xscreensaver/config/fontglide.xml
+/usr/share/xscreensaver/config/fuzzyflakes.xml
+/usr/share/xscreensaver/config/galaxy.xml
+/usr/share/xscreensaver/config/glitchpeg.xml
+/usr/share/xscreensaver/config/goop.xml
+/usr/share/xscreensaver/config/grav.xml
+/usr/share/xscreensaver/config/greynetic.xml
+/usr/share/xscreensaver/config/halftone.xml
+/usr/share/xscreensaver/config/halo.xml
+/usr/share/xscreensaver/config/helix.xml
+/usr/share/xscreensaver/config/hexadrop.xml
+/usr/share/xscreensaver/config/hopalong.xml
+/usr/share/xscreensaver/config/ifs.xml
+/usr/share/xscreensaver/config/imsmap.xml
+/usr/share/xscreensaver/config/interaggregate.xml
+/usr/share/xscreensaver/config/interference.xml
+/usr/share/xscreensaver/config/intermomentary.xml
+/usr/share/xscreensaver/config/julia.xml
+/usr/share/xscreensaver/config/kaleidescope.xml
+/usr/share/xscreensaver/config/kumppa.xml
+/usr/share/xscreensaver/config/lcdscrub.xml
+/usr/share/xscreensaver/config/loop.xml
+/usr/share/xscreensaver/config/m6502.xml
+/usr/share/xscreensaver/config/maze.xml
+/usr/share/xscreensaver/config/memscroller.xml
+/usr/share/xscreensaver/config/metaballs.xml
+/usr/share/xscreensaver/config/moire.xml
+/usr/share/xscreensaver/config/moire2.xml
+/usr/share/xscreensaver/config/mountain.xml
+/usr/share/xscreensaver/config/munch.xml
+/usr/share/xscreensaver/config/nerverot.xml
+/usr/share/xscreensaver/config/noseguy.xml
+/usr/share/xscreensaver/config/pacman.xml
+/usr/share/xscreensaver/config/pedal.xml
+/usr/share/xscreensaver/config/penetrate.xml
+/usr/share/xscreensaver/config/penrose.xml
+/usr/share/xscreensaver/config/petri.xml
+/usr/share/xscreensaver/config/phosphor.xml
+/usr/share/xscreensaver/config/piecewise.xml
+/usr/share/xscreensaver/config/polyominoes.xml
+/usr/share/xscreensaver/config/pong.xml
+/usr/share/xscreensaver/config/popsquares.xml
+/usr/share/xscreensaver/config/pyro.xml
+/usr/share/xscreensaver/config/qix.xml
+/usr/share/xscreensaver/config/rd-bomb.xml
+/usr/share/xscreensaver/config/ripples.xml
+/usr/share/xscreensaver/config/rocks.xml
+/usr/share/xscreensaver/config/rorschach.xml
+/usr/share/xscreensaver/config/rotzoomer.xml
+/usr/share/xscreensaver/config/shadebobs.xml
+/usr/share/xscreensaver/config/sierpinski.xml
+/usr/share/xscreensaver/config/slidescreen.xml
+/usr/share/xscreensaver/config/slip.xml
+/usr/share/xscreensaver/config/speedmine.xml
+/usr/share/xscreensaver/config/spotlight.xml
+/usr/share/xscreensaver/config/squiral.xml
+/usr/share/xscreensaver/config/starfish.xml
+/usr/share/xscreensaver/config/strange.xml
+/usr/share/xscreensaver/config/substrate.xml
+/usr/share/xscreensaver/config/swirl.xml
+/usr/share/xscreensaver/config/tessellimage.xml
+/usr/share/xscreensaver/config/thornbird.xml
+/usr/share/xscreensaver/config/triangle.xml
+/usr/share/xscreensaver/config/truchet.xml
+/usr/share/xscreensaver/config/twang.xml
+/usr/share/xscreensaver/config/vermiculate.xml
+/usr/share/xscreensaver/config/vfeedback.xml
+/usr/share/xscreensaver/config/vidwhacker.xml
+/usr/share/xscreensaver/config/wander.xml
+/usr/share/xscreensaver/config/webcollage.xml
+/usr/share/xscreensaver/config/whirlwindwarp.xml
+/usr/share/xscreensaver/config/wormhole.xml
+/usr/share/xscreensaver/config/xanalogtv.xml
+/usr/share/xscreensaver/config/xflame.xml
+/usr/share/xscreensaver/config/xjack.xml
+/usr/share/xscreensaver/config/xlyap.xml
+/usr/share/xscreensaver/config/xmatrix.xml
+/usr/share/xscreensaver/config/xrayswarm.xml
+/usr/share/xscreensaver/config/xspirograph.xml
+/usr/share/xscreensaver/config/zoom.xml
+
 %files libexec
 %defattr(-,root,root,-)
-%exclude /usr/libexec/xscreensaver/abstractile
-%exclude /usr/libexec/xscreensaver/anemone
-%exclude /usr/libexec/xscreensaver/anemotaxis
-%exclude /usr/libexec/xscreensaver/apollonian
-%exclude /usr/libexec/xscreensaver/apple2
-%exclude /usr/libexec/xscreensaver/attraction
-%exclude /usr/libexec/xscreensaver/barcode
-%exclude /usr/libexec/xscreensaver/binaryring
-%exclude /usr/libexec/xscreensaver/blaster
-%exclude /usr/libexec/xscreensaver/blitspin
-%exclude /usr/libexec/xscreensaver/bouboule
-%exclude /usr/libexec/xscreensaver/boxfit
-%exclude /usr/libexec/xscreensaver/braid
-%exclude /usr/libexec/xscreensaver/bsod
-%exclude /usr/libexec/xscreensaver/bumps
-%exclude /usr/libexec/xscreensaver/ccurve
-%exclude /usr/libexec/xscreensaver/celtic
-%exclude /usr/libexec/xscreensaver/cloudlife
-%exclude /usr/libexec/xscreensaver/compass
-%exclude /usr/libexec/xscreensaver/coral
-%exclude /usr/libexec/xscreensaver/crystal
-%exclude /usr/libexec/xscreensaver/cwaves
-%exclude /usr/libexec/xscreensaver/cynosure
-%exclude /usr/libexec/xscreensaver/decayscreen
-%exclude /usr/libexec/xscreensaver/deco
-%exclude /usr/libexec/xscreensaver/deluxe
-%exclude /usr/libexec/xscreensaver/demon
-%exclude /usr/libexec/xscreensaver/discrete
-%exclude /usr/libexec/xscreensaver/distort
-%exclude /usr/libexec/xscreensaver/drift
-%exclude /usr/libexec/xscreensaver/epicycle
-%exclude /usr/libexec/xscreensaver/eruption
-%exclude /usr/libexec/xscreensaver/euler2d
-%exclude /usr/libexec/xscreensaver/fadeplot
-%exclude /usr/libexec/xscreensaver/fiberlamp
-%exclude /usr/libexec/xscreensaver/filmleader
-%exclude /usr/libexec/xscreensaver/fireworkx
-%exclude /usr/libexec/xscreensaver/flame
-%exclude /usr/libexec/xscreensaver/flow
-%exclude /usr/libexec/xscreensaver/fluidballs
-%exclude /usr/libexec/xscreensaver/fontglide
-%exclude /usr/libexec/xscreensaver/fuzzyflakes
-%exclude /usr/libexec/xscreensaver/galaxy
-%exclude /usr/libexec/xscreensaver/glitchpeg
-%exclude /usr/libexec/xscreensaver/goop
-%exclude /usr/libexec/xscreensaver/grav
-%exclude /usr/libexec/xscreensaver/greynetic
-%exclude /usr/libexec/xscreensaver/halftone
-%exclude /usr/libexec/xscreensaver/halo
-%exclude /usr/libexec/xscreensaver/helix
-%exclude /usr/libexec/xscreensaver/hexadrop
-%exclude /usr/libexec/xscreensaver/hopalong
-%exclude /usr/libexec/xscreensaver/ifs
-%exclude /usr/libexec/xscreensaver/imsmap
-%exclude /usr/libexec/xscreensaver/interaggregate
-%exclude /usr/libexec/xscreensaver/interference
-%exclude /usr/libexec/xscreensaver/intermomentary
-%exclude /usr/libexec/xscreensaver/julia
-%exclude /usr/libexec/xscreensaver/kaleidescope
-%exclude /usr/libexec/xscreensaver/kumppa
-%exclude /usr/libexec/xscreensaver/lcdscrub
-%exclude /usr/libexec/xscreensaver/ljlatest
-%exclude /usr/libexec/xscreensaver/loop
-%exclude /usr/libexec/xscreensaver/m6502
-%exclude /usr/libexec/xscreensaver/maze
-%exclude /usr/libexec/xscreensaver/memscroller
-%exclude /usr/libexec/xscreensaver/metaballs
-%exclude /usr/libexec/xscreensaver/moire
-%exclude /usr/libexec/xscreensaver/moire2
-%exclude /usr/libexec/xscreensaver/mountain
-%exclude /usr/libexec/xscreensaver/munch
-%exclude /usr/libexec/xscreensaver/nerverot
-%exclude /usr/libexec/xscreensaver/noseguy
-%exclude /usr/libexec/xscreensaver/pacman
-%exclude /usr/libexec/xscreensaver/pedal
-%exclude /usr/libexec/xscreensaver/penetrate
-%exclude /usr/libexec/xscreensaver/penrose
-%exclude /usr/libexec/xscreensaver/petri
-%exclude /usr/libexec/xscreensaver/phosphor
-%exclude /usr/libexec/xscreensaver/piecewise
-%exclude /usr/libexec/xscreensaver/polyominoes
-%exclude /usr/libexec/xscreensaver/pong
-%exclude /usr/libexec/xscreensaver/popsquares
-%exclude /usr/libexec/xscreensaver/pyro
-%exclude /usr/libexec/xscreensaver/qix
-%exclude /usr/libexec/xscreensaver/rd-bomb
-%exclude /usr/libexec/xscreensaver/ripples
-%exclude /usr/libexec/xscreensaver/rocks
-%exclude /usr/libexec/xscreensaver/rorschach
-%exclude /usr/libexec/xscreensaver/rotzoomer
-%exclude /usr/libexec/xscreensaver/shadebobs
-%exclude /usr/libexec/xscreensaver/sierpinski
-%exclude /usr/libexec/xscreensaver/slidescreen
-%exclude /usr/libexec/xscreensaver/slip
-%exclude /usr/libexec/xscreensaver/speedmine
-%exclude /usr/libexec/xscreensaver/spotlight
-%exclude /usr/libexec/xscreensaver/squiral
-%exclude /usr/libexec/xscreensaver/starfish
-%exclude /usr/libexec/xscreensaver/strange
-%exclude /usr/libexec/xscreensaver/substrate
-%exclude /usr/libexec/xscreensaver/swirl
-%exclude /usr/libexec/xscreensaver/tessellimage
-%exclude /usr/libexec/xscreensaver/thornbird
-%exclude /usr/libexec/xscreensaver/triangle
-%exclude /usr/libexec/xscreensaver/truchet
-%exclude /usr/libexec/xscreensaver/twang
-%exclude /usr/libexec/xscreensaver/vermiculate
-%exclude /usr/libexec/xscreensaver/vfeedback
-%exclude /usr/libexec/xscreensaver/vidwhacker
-%exclude /usr/libexec/xscreensaver/wander
-%exclude /usr/libexec/xscreensaver/webcollage
-%exclude /usr/libexec/xscreensaver/whirlwindwarp
-%exclude /usr/libexec/xscreensaver/wormhole
-%exclude /usr/libexec/xscreensaver/xanalogtv
-%exclude /usr/libexec/xscreensaver/xflame
-%exclude /usr/libexec/xscreensaver/xjack
-%exclude /usr/libexec/xscreensaver/xlyap
-%exclude /usr/libexec/xscreensaver/xmatrix
-%exclude /usr/libexec/xscreensaver/xrayswarm
-%exclude /usr/libexec/xscreensaver/xspirograph
-%exclude /usr/libexec/xscreensaver/zoom
 /usr/libexec/xscreensaver/webcollage-helper
 
 %files man
