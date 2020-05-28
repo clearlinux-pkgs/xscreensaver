@@ -32,4 +32,3 @@ Configure miss: text file /usr/X11R6/README
 Configure miss: text file /usr/share/doc/libX11*/COPYING
 Configure miss: text file /usr/X11/share/X11/doc/README*
 Configure miss: text file /usr/share/doc/debian/debian-manifesto
-Configure miss: setcap
