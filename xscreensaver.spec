@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.44
-Release  : 26
+Release  : 27
 URL      : https://www.jwz.org/xscreensaver/xscreensaver-5.44.tar.gz
 Source0  : https://www.jwz.org/xscreensaver/xscreensaver-5.44.tar.gz
 Summary  : A minimal installation of xscreensaver.
