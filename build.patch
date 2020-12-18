@@ -1,6 +1,8 @@
---- xscreensaver-5.42/configure.in~	2018-12-23 21:52:51.000000000 +0000
-+++ xscreensaver-5.42/configure.in	2018-12-30 19:02:05.608271634 +0000
-@@ -436,7 +436,7 @@
+diff --git a/configure.ac b/configure.ac
+index 9d7b8e1..0dcaebf 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -378,7 +378,7 @@ AC_DEFUN([AC_PROG_CC_ANSI],
  
    if test -n "$GCC"; then
      AC_MSG_RESULT(Turning on gcc compiler warnings.)
@@ -9,9 +11,7 @@
      OBJCC="$OBJCC -Wall"
      # As of gcc 3.4, we have "-Wdeclaration-after-statement"
      # and so perhaps now we can do without -pedantic?
---- xscreensaver-5.42/configure.in~	2018-12-30 19:02:05.000000000 +0000
-+++ xscreensaver-5.42/configure.in	2018-12-30 19:05:37.227268688 +0000
-@@ -519,7 +519,7 @@
+@@ -461,7 +461,7 @@ AC_DEFUN([AC_GCC_ACCEPTS_STD], [
        # we *must* allow // comments when compiling on Mac OS 10.6!  FUCK!
      ;;
     *)
@@ -20,3 +20,14 @@
     ;;
    esac
  ])
+@@ -1282,6 +1282,10 @@ AC_SUBST(GETTEXT_PACKAGE)
+ ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
+ AM_GLIB_GNU_GETTEXT
+ MKINSTALLDIRS="$INSTALL_DIRS"
++dnl The po/Makefile.in.in created by `intltoolize` references @install_sh@,
++dnl which is subsituted by AM_PROG_INSTALL_SH at least... This fixes
++dnl installation of .mo files.
++AM_PROG_INSTALL_SH
+ 
+ 
+ ###############################################################################

@@ -1,10 +1,12 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-gtk+-dev
-gdk-pixbuf-dev
-bc
-libjpeg-turbo-dev
 Linux-PAM-dev
-libXmu-dev
-libXinerama-dev
+bc
+gdk-pixbuf-dev
+gdk-pixbuf-xlib-dev
+gtk+-dev
 libXext-dev
+libXinerama-dev
+libXmu-dev
+libjpeg-turbo-dev
+xorg-fonts
