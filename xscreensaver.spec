@@ -4,7 +4,7 @@
 #
 Name     : xscreensaver
 Version  : 5.45
-Release  : 28
+Release  : 29
 URL      : https://www.jwz.org/xscreensaver/xscreensaver-5.45.tar.gz
 Source0  : https://www.jwz.org/xscreensaver/xscreensaver-5.45.tar.gz
 Summary  : A minimal installation of xscreensaver.
@@ -44,7 +44,6 @@ BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(gdk-pixbuf-2.0)
 BuildRequires : pkgconfig(gl)
 BuildRequires : pkgconfig(ice)
-BuildRequires : pkgconfig(libglade-2.0)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(systemd)
 BuildRequires : pkgconfig(x11)
@@ -121,7 +120,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1608261650
+export SOURCE_DATE_EPOCH=1616030100
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -134,7 +133,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-
 make  %{?_smp_mflags}  all
 
 %install
-export SOURCE_DATE_EPOCH=1608261650
+export SOURCE_DATE_EPOCH=1616030100
 rm -rf %{buildroot}
 %make_install
 %find_lang xscreensaver
