@@ -1,21 +1,25 @@
 Configure miss: DEC-style shadow passwords
 Configure miss: FreeBSD-style shadow passwords
+Configure miss: GL/gle.h
+Configure miss: GL/gutil.h
 Configure miss: HP-style shadow passwords
 Configure miss: Kerberos 4
+Configure miss: OpenBSD-style shadow passwords
 Configure miss: Sun-style shadow passwords
 Configure miss: X11/extensions/xidle.h
-Configure miss: XF86MiscSetGrabKeysState in -lXxf86misc
-Configure miss: XHPDisableReset in X11/XHPlib.h
 Configure miss: crypt in -lc
+Configure miss: eglCreatePlatformWindowSurface in -lGL
 Configure miss: gdk-pixbuf/gdk-pixbuf-xlib.h
 Configure miss: gdmflexiserver
-Configure miss: glXCreateContext in -lGL
-Configure miss: glXCreateContext in -lMesaGL
+Configure miss: gluBuild2DMipmaps in -lGL
 Configure miss: gnome-open
 Configure miss: gnome-url-show
 Configure miss: image directory /Library/Desktop Pictures/
+Configure miss: image directory /usr/share/backgrounds/
 Configure miss: image directory /usr/share/backgrounds/images/
-Configure miss: image directory /usr/share/rpd-wallpaper
+Configure miss: image directory /usr/share/lxde/wallpapers/
+Configure miss: image directory /usr/share/pixmaps/backgrounds/
+Configure miss: image directory /usr/share/rpd-wallpaper/
 Configure miss: image directory /usr/share/wallpapers/
 Configure miss: kdmctl
 Configure miss: lxdm
@@ -28,6 +32,5 @@ Configure miss: text file /usr/share/doc/debian/debian-manifesto
 Configure miss: text file /usr/share/doc/libX11*/COPYING
 Configure miss: text file /usr/share/doc/xserver-common/copyright
 Configure miss: text file /usr/share/doc/xserver-xorg-core/copyright
-Configure miss: whether /proc/interrupts contains keyboard data
-Configure miss: whether gcc accepts -no-cpp-precomp
-Configure miss: whether this is MacOS X
+Configure miss: whether gcc -std=gnu89 -pedantic -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wdeclaration-after-statement -Wno-overlength-strings -Wno-language-extension-token -Wno-variadic-macros is Clang
+Configure miss: whether this is macOS

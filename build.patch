@@ -1,26 +1,8 @@
 diff --git a/configure.ac b/configure.ac
-index 9d7b8e1..0dcaebf 100644
+index c3f0b5b..a7129eb 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -378,7 +378,7 @@ AC_DEFUN([AC_PROG_CC_ANSI],
- 
-   if test -n "$GCC"; then
-     AC_MSG_RESULT(Turning on gcc compiler warnings.)
--    CC="$CC -pedantic -Wall -Wstrict-prototypes -Wnested-externs -Wmissing-prototypes"
-+    CC="$CC -Wall -Wstrict-prototypes -Wnested-externs -Wmissing-prototypes"
-     OBJCC="$OBJCC -Wall"
-     # As of gcc 3.4, we have "-Wdeclaration-after-statement"
-     # and so perhaps now we can do without -pedantic?
-@@ -461,7 +461,7 @@ AC_DEFUN([AC_GCC_ACCEPTS_STD], [
-       # we *must* allow // comments when compiling on Mac OS 10.6!  FUCK!
-     ;;
-    *)
--     AC_CHECK_GCC_ARG(std, -std=c89)
-+     AC_CHECK_GCC_ARG(std, -std=gnu89)
-    ;;
-   esac
- ])
-@@ -1282,6 +1282,10 @@ AC_SUBST(GETTEXT_PACKAGE)
+@@ -1184,6 +1184,10 @@ AC_SUBST(GETTEXT_PACKAGE)
  ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
  AM_GLIB_GNU_GETTEXT
  MKINSTALLDIRS="$INSTALL_DIRS"
