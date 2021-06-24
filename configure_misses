@@ -22,6 +22,8 @@ Configure miss: image directory /usr/share/pixmaps/backgrounds/
 Configure miss: image directory /usr/share/rpd-wallpaper/
 Configure miss: image directory /usr/share/wallpapers/
 Configure miss: kdmctl
+Configure miss: libelogind
+Configure miss: libelogind usability
 Configure miss: lxdm
 Configure miss: pam_fail_delay in -lpam
 Configure miss: sqrtf
