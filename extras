@@ -11,6 +11,7 @@
 /usr/libexec/xscreensaver/atunnel
 /usr/libexec/xscreensaver/barcode
 /usr/libexec/xscreensaver/beats
+/usr/libexec/xscreensaver/binaryhorizon
 /usr/libexec/xscreensaver/binaryring
 /usr/libexec/xscreensaver/blaster
 /usr/libexec/xscreensaver/blinkbox
@@ -133,6 +134,9 @@
 /usr/libexec/xscreensaver/lockward
 /usr/libexec/xscreensaver/loop
 /usr/libexec/xscreensaver/m6502
+/usr/libexec/xscreensaver/mapscroller
+/usr/libexec/xscreensaver/mapscroller.pl
+/usr/libexec/xscreensaver/marbling
 /usr/libexec/xscreensaver/maze
 /usr/libexec/xscreensaver/maze3d
 /usr/libexec/xscreensaver/memscroller
@@ -176,6 +180,7 @@
 /usr/libexec/xscreensaver/raverhoop
 /usr/libexec/xscreensaver/razzledazzle
 /usr/libexec/xscreensaver/rd-bomb
+/usr/libexec/xscreensaver/rdbomb
 /usr/libexec/xscreensaver/ripples
 /usr/libexec/xscreensaver/rocks
 /usr/libexec/xscreensaver/romanboy
@@ -184,6 +189,7 @@
 /usr/libexec/xscreensaver/rubik
 /usr/libexec/xscreensaver/rubikblocks
 /usr/libexec/xscreensaver/sballs
+/usr/libexec/xscreensaver/scooter
 /usr/libexec/xscreensaver/shadebobs
 /usr/libexec/xscreensaver/sierpinski
 /usr/libexec/xscreensaver/sierpinski3d
@@ -199,6 +205,7 @@
 /usr/libexec/xscreensaver/spotlight
 /usr/libexec/xscreensaver/sproingies
 /usr/libexec/xscreensaver/squiral
+/usr/libexec/xscreensaver/squirtorus
 /usr/libexec/xscreensaver/stairs
 /usr/libexec/xscreensaver/starfish
 /usr/libexec/xscreensaver/starwars
@@ -250,6 +257,7 @@
 /usr/share/xscreensaver/config/atunnel.xml
 /usr/share/xscreensaver/config/barcode.xml
 /usr/share/xscreensaver/config/beats.xml
+/usr/share/xscreensaver/config/binaryhorizon.xml
 /usr/share/xscreensaver/config/binaryring.xml
 /usr/share/xscreensaver/config/blaster.xml
 /usr/share/xscreensaver/config/blinkbox.xml
@@ -372,6 +380,8 @@
 /usr/share/xscreensaver/config/lockward.xml
 /usr/share/xscreensaver/config/loop.xml
 /usr/share/xscreensaver/config/m6502.xml
+/usr/share/xscreensaver/config/mapscroller.xml
+/usr/share/xscreensaver/config/marbling.xml
 /usr/share/xscreensaver/config/maze.xml
 /usr/share/xscreensaver/config/maze3d.xml
 /usr/share/xscreensaver/config/memscroller.xml
@@ -415,6 +425,7 @@
 /usr/share/xscreensaver/config/raverhoop.xml
 /usr/share/xscreensaver/config/razzledazzle.xml
 /usr/share/xscreensaver/config/rd-bomb.xml
+/usr/share/xscreensaver/config/rdbomb.xml
 /usr/share/xscreensaver/config/ripples.xml
 /usr/share/xscreensaver/config/rocks.xml
 /usr/share/xscreensaver/config/romanboy.xml
@@ -423,6 +434,7 @@
 /usr/share/xscreensaver/config/rubik.xml
 /usr/share/xscreensaver/config/rubikblocks.xml
 /usr/share/xscreensaver/config/sballs.xml
+/usr/share/xscreensaver/config/scooter.xml
 /usr/share/xscreensaver/config/shadebobs.xml
 /usr/share/xscreensaver/config/sierpinski.xml
 /usr/share/xscreensaver/config/sierpinski3d.xml
@@ -431,12 +443,14 @@
 /usr/share/xscreensaver/config/slip.xml
 /usr/share/xscreensaver/config/sonar.xml
 /usr/share/xscreensaver/config/speedmine.xml
+/usr/share/xscreensaver/config/sphereeversion.xml
 /usr/share/xscreensaver/config/spheremonics.xml
 /usr/share/xscreensaver/config/splitflap.xml
 /usr/share/xscreensaver/config/splodesic.xml
 /usr/share/xscreensaver/config/spotlight.xml
 /usr/share/xscreensaver/config/sproingies.xml
 /usr/share/xscreensaver/config/squiral.xml
+/usr/share/xscreensaver/config/squirtorus.xml
 /usr/share/xscreensaver/config/stairs.xml
 /usr/share/xscreensaver/config/starfish.xml
 /usr/share/xscreensaver/config/starwars.xml

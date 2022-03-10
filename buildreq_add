@@ -4,6 +4,7 @@ Linux-PAM-dev
 bc
 gdk-pixbuf-dev
 gdk-pixbuf-xlib-dev
+gettext
 gtk+-dev
 libXext-dev
 libXinerama-dev
