@@ -30,6 +30,7 @@
 /usr/libexec/xscreensaver/carousel
 /usr/libexec/xscreensaver/ccurve
 /usr/libexec/xscreensaver/celtic
+/usr/libexec/xscreensaver/chompytower
 /usr/libexec/xscreensaver/circuit
 /usr/libexec/xscreensaver/cityflow
 /usr/libexec/xscreensaver/cloudlife
@@ -151,6 +152,7 @@
 /usr/libexec/xscreensaver/morph3d
 /usr/libexec/xscreensaver/mountain
 /usr/libexec/xscreensaver/munch
+/usr/libexec/xscreensaver/nakagin
 /usr/libexec/xscreensaver/nerverot
 /usr/libexec/xscreensaver/noof
 /usr/libexec/xscreensaver/noseguy
@@ -276,6 +278,7 @@
 /usr/share/xscreensaver/config/carousel.xml
 /usr/share/xscreensaver/config/ccurve.xml
 /usr/share/xscreensaver/config/celtic.xml
+/usr/share/xscreensaver/config/chompytower.xml
 /usr/share/xscreensaver/config/circuit.xml
 /usr/share/xscreensaver/config/cityflow.xml
 /usr/share/xscreensaver/config/cloudlife.xml
@@ -396,6 +399,7 @@
 /usr/share/xscreensaver/config/morph3d.xml
 /usr/share/xscreensaver/config/mountain.xml
 /usr/share/xscreensaver/config/munch.xml
+/usr/share/xscreensaver/config/nakagin.xml
 /usr/share/xscreensaver/config/nerverot.xml
 /usr/share/xscreensaver/config/noof.xml
 /usr/share/xscreensaver/config/noseguy.xml

@@ -1,15 +1,27 @@
 diff --git a/configure.ac b/configure.ac
-index c3f0b5b..a7129eb 100644
+index 1c143b2..0b6b7ac 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -1184,6 +1184,10 @@ AC_SUBST(GETTEXT_PACKAGE)
+@@ -20,11 +20,6 @@ AC_CONFIG_HEADERS([config.h])
+ echo "current directory: `pwd`"
+ echo "command line was: $0 $@"
+ 
+-if ! test -z "$ac_unrecognized_opts" ; then
+-  echo "" >&2
+-  exit 2
+-fi
+-
+ ###############################################################################
+ #
+ #       Autoheader stuff
+@@ -1186,6 +1181,10 @@ AC_SUBST(GETTEXT_PACKAGE)
  ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
- AM_GLIB_GNU_GETTEXT
+ AM_GNU_GETTEXT([external])
  MKINSTALLDIRS="$INSTALL_DIRS"
 +dnl The po/Makefile.in.in created by `intltoolize` references @install_sh@,
 +dnl which is subsituted by AM_PROG_INSTALL_SH at least... This fixes
 +dnl installation of .mo files.
 +AM_PROG_INSTALL_SH
  
- 
- ###############################################################################
+ # The library is there, but neither $INTLLIBS nor $LIBINTL are getting set.
+ if test -z "$INTLLIBS" ; then INTLLIBS="$LIBINTL" ; fi
