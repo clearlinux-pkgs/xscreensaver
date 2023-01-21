@@ -12,7 +12,6 @@ Configure miss: X11/extensions/xidle.h
 Configure miss: XHPDisableReset in X11/XHPlib.h
 Configure miss: crypt in -lc
 Configure miss: eglCreatePlatformWindowSurface in -lGL
-Configure miss: gdk-pixbuf/gdk-pixbuf-xlib.h
 Configure miss: gdmflexiserver
 Configure miss: gettext in -lintl
 Configure miss: gluBuild2DMipmaps in -lGL

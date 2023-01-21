@@ -1,8 +1,9 @@
-6.04
+6.06
 glibc-staticdev
 glu-dev
 intltool-dev
 krb5-dev
 lightdm
 perl
+pkgconfig(gtk+-3.0)
 pkgconfig(systemd)
