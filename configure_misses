@@ -1,41 +1,84 @@
 Configure miss: 32-bit host C ABI
+Configure miss: 32-bit host C ABI
+Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: DEC-style shadow passwords
+Configure miss: DEC-style shadow passwords
+Configure miss: FreeBSD-style shadow passwords
 Configure miss: FreeBSD-style shadow passwords
 Configure miss: GL/gle.h
+Configure miss: GL/gle.h
+Configure miss: GL/gutil.h
 Configure miss: GL/gutil.h
 Configure miss: HP-style shadow passwords
+Configure miss: HP-style shadow passwords
+Configure miss: Kerberos 4
 Configure miss: Kerberos 4
 Configure miss: OpenBSD-style shadow passwords
+Configure miss: OpenBSD-style shadow passwords
+Configure miss: Sun-style shadow passwords
 Configure miss: Sun-style shadow passwords
 Configure miss: X11/extensions/xidle.h
+Configure miss: X11/extensions/xidle.h
+Configure miss: XHPDisableReset in X11/XHPlib.h
 Configure miss: XHPDisableReset in X11/XHPlib.h
 Configure miss: crypt in -lc
+Configure miss: crypt in -lc
+Configure miss: eglCreatePlatformWindowSurface in -lGL
 Configure miss: eglCreatePlatformWindowSurface in -lGL
 Configure miss: gdmflexiserver
+Configure miss: gdmflexiserver
+Configure miss: gettext in -lintl
 Configure miss: gettext in -lintl
 Configure miss: gluBuild2DMipmaps in -lGL
+Configure miss: gluBuild2DMipmaps in -lGL
+Configure miss: gnome-open
 Configure miss: gnome-open
 Configure miss: gnome-url-show
+Configure miss: gnome-url-show
+Configure miss: image directory /Library/Desktop Pictures/
 Configure miss: image directory /Library/Desktop Pictures/
 Configure miss: image directory /usr/share/backgrounds/
+Configure miss: image directory /usr/share/backgrounds/
+Configure miss: image directory /usr/share/backgrounds/images/
 Configure miss: image directory /usr/share/backgrounds/images/
 Configure miss: image directory /usr/share/lxde/wallpapers/
+Configure miss: image directory /usr/share/lxde/wallpapers/
+Configure miss: image directory /usr/share/pixmaps/backgrounds/
 Configure miss: image directory /usr/share/pixmaps/backgrounds/
 Configure miss: image directory /usr/share/rpd-wallpaper/
+Configure miss: image directory /usr/share/rpd-wallpaper/
+Configure miss: image directory /usr/share/wallpapers/
 Configure miss: image directory /usr/share/wallpapers/
 Configure miss: kdmctl
+Configure miss: kdmctl
+Configure miss: libavutil
+Configure miss: libavutil
+Configure miss: libelogind
 Configure miss: libelogind
 Configure miss: libelogind usability
+Configure miss: libelogind usability
+Configure miss: lxdm
 Configure miss: lxdm
 Configure miss: pam_fail_delay in -lpam
+Configure miss: pam_fail_delay in -lpam
+Configure miss: sqrtf
 Configure miss: sqrtf
 Configure miss: text file /usr/X11/share/X11/doc/README*
+Configure miss: text file /usr/X11/share/X11/doc/README*
+Configure miss: text file /usr/X11R6/README
 Configure miss: text file /usr/X11R6/README
 Configure miss: text file /usr/X11R6/lib/X11/doc/README
+Configure miss: text file /usr/X11R6/lib/X11/doc/README
+Configure miss: text file /usr/share/doc/debian/debian-manifesto
 Configure miss: text file /usr/share/doc/debian/debian-manifesto
 Configure miss: text file /usr/share/doc/libX11*/COPYING
+Configure miss: text file /usr/share/doc/libX11*/COPYING
+Configure miss: text file /usr/share/doc/xserver-common/copyright
 Configure miss: text file /usr/share/doc/xserver-common/copyright
 Configure miss: text file /usr/share/doc/xserver-xorg-core/copyright
-Configure miss: whether gcc -std=gnu89 -pedantic -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wdeclaration-after-statement -Wno-overlength-strings -Wno-language-extension-token -Wno-variadic-macros is Clang
+Configure miss: text file /usr/share/doc/xserver-xorg-core/copyright
+Configure miss: whether gcc -std=gnu99 -pedantic -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wno-overlength-strings is Clang
+Configure miss: whether gcc -std=gnu99 -pedantic -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wno-overlength-strings is Clang
+Configure miss: whether this is macOS
 Configure miss: whether this is macOS
