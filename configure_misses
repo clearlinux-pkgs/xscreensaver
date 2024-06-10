@@ -26,6 +26,8 @@ Configure miss: crypt in -lc
 Configure miss: crypt in -lc
 Configure miss: eglCreatePlatformWindowSurface in -lGL
 Configure miss: eglCreatePlatformWindowSurface in -lGL
+Configure miss: gcc -std=gnu99 -pedantic -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wno-overlength-strings option to enable large file support
+Configure miss: gcc -std=gnu99 -pedantic -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes -Wno-overlength-strings option to enable large file support
 Configure miss: gdmflexiserver
 Configure miss: gdmflexiserver
 Configure miss: gettext in -lintl
