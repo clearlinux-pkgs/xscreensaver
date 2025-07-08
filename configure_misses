@@ -36,6 +36,10 @@ Configure miss: gluBuild2DMipmaps in -lGL
 Configure miss: gluBuild2DMipmaps in -lGL
 Configure miss: gnome-open
 Configure miss: gnome-open
+Configure miss: gnome-open
+Configure miss: gnome-open
+Configure miss: gnome-url-show
+Configure miss: gnome-url-show
 Configure miss: gnome-url-show
 Configure miss: gnome-url-show
 Configure miss: image directory /Library/Desktop Pictures/
